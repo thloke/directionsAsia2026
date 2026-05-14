@@ -9,12 +9,7 @@ next_title: "Your First Agent"
 
 ## Access Your Environment
 
-Your facilitator will provide you with login credentials for your assigned Business Central environment.
-
-<div class="callout callout-info">
-  <div class="callout-title">&#8505; Login Details</div>
-  Your username and password will be handed out at the start of the session.
-</div>
+Your facilitator will provide you with a printed handout containing your login credentials.
 
 ## Task 1 — Sign In
 
