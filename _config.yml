@@ -1,0 +1,35 @@
+title: "Building Agents in Business Central"
+tagline: "Directions Asia 2026 Workshop"
+description: "A hands-on workshop for building AI-powered agents in Microsoft Dynamics 365 Business Central."
+
+url: "https://thloke.github.io"
+baseurl: "/directionsAsia2026"
+
+permalink: pretty
+
+stages:
+  - num: 1
+    title: "Introduction & Setup"
+    url: "/stages/01-introduction/"
+    description: "Get your environment ready and understand the workshop objectives."
+    icon: "🚀"
+  - num: 2
+    title: "Your First Agent"
+    url: "/stages/02-first-agent/"
+    description: "Create a basic Business Central agent from scratch."
+    icon: "🤖"
+  - num: 3
+    title: "Tools & Actions"
+    url: "/stages/03-tools-actions/"
+    description: "Extend your agent with custom tools and AL actions."
+    icon: "🔧"
+  - num: 4
+    title: "Testing & Debugging"
+    url: "/stages/04-testing/"
+    description: "Test your agent and debug common issues."
+    icon: "🧪"
+  - num: 5
+    title: "Publishing & Next Steps"
+    url: "/stages/05-publishing/"
+    description: "Publish your agent and explore what comes next."
+    icon: "📦"

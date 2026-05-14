@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+{% assign total_stages = site.stages | size %}
+
+<div class="page-header">
+  <div class="stage-badge">Stage {{ page.stage_num }} of {{ total_stages }}</div>
+  <h1>{{ page.title }}</h1>
+  {% if page.description %}<p class="lead">{{ page.description }}</p>{% endif %}
+</div>
+
+<div class="progress-bar" role="progressbar" aria-valuenow="{{ page.stage_num }}" aria-valuemax="{{ total_stages }}" aria-label="Workshop progress">
+  {% for stage in site.stages %}
+    {% if stage.num < page.stage_num %}
+      <div class="progress-step done" title="Stage {{ stage.num }}: {{ stage.title }}"></div>
+    {% elsif stage.num == page.stage_num %}
+      <div class="progress-step current" title="Current: Stage {{ stage.num }}"></div>
+    {% else %}
+      <div class="progress-step" title="Stage {{ stage.num }}: {{ stage.title }}"></div>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<div class="content-body">
+  {{ content }}
+</div>
+
+<nav class="stage-nav" aria-label="Stage navigation">
+  <div>
+    {% if page.prev_stage %}
+      <a href="{{ page.prev_stage | relative_url }}" class="btn btn-secondary">&#8592; {{ page.prev_title }}</a>
+    {% else %}
+      <a href="{{ '/' | relative_url }}" class="btn btn-secondary">&#8592; Overview</a>
+    {% endif %}
+  </div>
+  <div>
+    {% if page.next_stage %}
+      <a href="{{ page.next_stage | relative_url }}" class="btn btn-primary">{{ page.next_title }} &#8594;</a>
+    {% else %}
+      <span class="btn btn-complete">Workshop Complete &#127881;</span>
+    {% endif %}
+  </div>
+</nav>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <header class="topbar">
+    <a href="{{ '/' | relative_url }}" class="topbar-brand">
+      <svg width="22" height="22" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M0 0h11v11H0z" fill="#fff"/>
+        <path d="M12 0h11v11H12z" fill="#fff" opacity=".7"/>
+        <path d="M0 12h11v11H0z" fill="#fff" opacity=".7"/>
+        <path d="M12 12h11v11H12z" fill="#fff" opacity=".4"/>
+      </svg>
+      <span>{{ site.title }}</span>
+    </a>
+    <span class="topbar-event">{{ site.tagline }}</span>
+  </header>
+
+  <div class="page-wrapper">
+    <nav class="sidebar" aria-label="Workshop navigation">
+      <div class="sidebar-section">
+        <p class="sidebar-heading">Navigation</p>
+        <a href="{{ '/' | relative_url }}"
+           class="sidebar-link{% if page.url == '/' %} active{% endif %}">
+          <svg class="sidebar-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5v-3.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 6.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146z"/>
+          </svg>
+          Overview
+        </a>
+      </div>
+      <div class="sidebar-section">
+        <p class="sidebar-heading">Workshop Stages</p>
+        {% for stage in site.stages %}
+        <a href="{{ stage.url | relative_url }}"
+           class="sidebar-link{% if page.url == stage.url %} active{% endif %}">
+          <span class="sidebar-stage-num">{{ stage.num }}</span>
+          {{ stage.title }}
+        </a>
+        {% endfor %}
+      </div>
+    </nav>
+
+    <main class="main-content" id="main-content">
+      {{ content }}
+    </main>
+  </div>
+</body>
+</html>
