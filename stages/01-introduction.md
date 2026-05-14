@@ -2,28 +2,33 @@
 layout: stage
 title: "Introduction & Setup"
 stage_num: 1
-description: "Get your environment ready and understand the workshop objectives."
+description: "Log in to your Business Central environment and verify access."
 next_stage: /stages/02-first-agent/
 next_title: "Your First Agent"
 ---
 
-## Objectives
+## Access Your Environment
 
-By the end of this stage you will:
+Your facilitator will provide you with login credentials for your assigned Business Central environment.
 
-- Understand what AI agents are in the context of Business Central
-- Have your development environment set up and verified
-- Know how the rest of the workshop is structured
+<div class="callout callout-info">
+  <div class="callout-title">&#8505; Login Details</div>
+  Your username and password will be handed out at the start of the session.
+</div>
 
-## Prerequisites
+## Task 1 — Sign In
 
-Before continuing, make sure you have the following ready:
+1. Open a browser and go to **[businesscentral.dynamics.com](https://businesscentral.dynamics.com)**
+2. Sign in using the credentials provided
+3. You should land on the Business Central home page (Role Centre)
 
-- Business Central sandbox environment (SaaS or on-premises)
-- Visual Studio Code with the **AL Language** extension installed
-- AL development environment configured and connected to your BC instance
-- Access to the workshop repository
+<div class="callout callout-tip">
+  <div class="callout-title">&#10003; You're ready when…</div>
+  You can see the Business Central Role Centre and your company name appears in the top navigation bar.
+</div>
 
----
+## Stuck?
 
-*&#128679; Workshop content for this stage will be filled in during the session.*
+- Make sure you are using the credentials exactly as provided — check for capital letters and spaces
+- Try an **InPrivate / Incognito** window if your browser auto-fills a different account
+- Ask your facilitator for help
