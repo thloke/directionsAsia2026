@@ -43,6 +43,16 @@
         </a>
         {% endfor %}
       </div>
+      <div class="sidebar-section">
+        <p class="sidebar-heading">Resources</p>
+        <a href="{{ '/appendix/' | relative_url }}"
+           class="sidebar-link{% if page.url contains 'appendix' %} active{% endif %}">
+          <svg class="sidebar-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <path d="M4.5 1A1.5 1.5 0 0 0 3 2.5v11A1.5 1.5 0 0 0 4.5 15h7a1.5 1.5 0 0 0 1.5-1.5v-8.5l-4-4H4.5zM9 2v3.5A.5.5 0 0 0 9.5 6H13L9 2zM5 8h6v1H5V8zm0 2h6v1H5v-1zm0 2h4v1H5v-1z"/>
+          </svg>
+          Reference Docs
+        </a>
+      </div>
     </nav>
 
     <main class="main-content" id="main-content">
