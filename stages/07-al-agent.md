@@ -160,7 +160,7 @@ end;</code></pre>
     <div class="task-number">11</div>
     <h3>Create an instance of your AL agent</h3>
   </div>
-  <p>Go to <strong>Copilot & AI Capabilities</strong> in BC — your agent type should be listed. Select it and run through the setup dialog. It'll apply the profile and permissions from your AL code automatically.</p>
+  <p>Go to the <strong>Agents (preview)</strong> page — your agent type should be listed. Select it and run through the setup dialog. It'll apply the profile and permissions from your AL code automatically.</p>
 </div>
 
 <div class="task-card">

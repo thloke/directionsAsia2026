@@ -104,7 +104,7 @@ end;</code></pre>
     <div class="task-number">5</div>
     <h3>Publish and delete the existing agent instance</h3>
   </div>
-  <p>Publish (<kbd>F5</kbd>), then delete the agent instance from Stage 7 in <strong>Copilot & AI Capabilities</strong> so you can create a fresh one through the setup dialog.</p>
+  <p>Publish (<kbd>F5</kbd>), then delete the agent instance from Stage 7 on the <strong>Agents (preview)</strong> page so you can create a fresh one through the setup dialog.</p>
 </div>
 
 <div class="task-card">

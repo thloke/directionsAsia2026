@@ -71,7 +71,7 @@ The simplest integration: a button on a page that sends a task to your agent.
     <div class="task-number">2</div>
     <h3>Publish and test the action</h3>
   </div>
-  <p>Publish, open a sales order, and try the <strong>Send to Agent</strong> action. Go to <strong>Copilot & AI Capabilities</strong> and check a task appeared. Approve and run it, then look at the log.</p>
+  <p>Publish, open a sales order, and try the <strong>Send to Agent</strong> action. Go to the <strong>Agents (preview)</strong> page and check a task appeared. Approve and run it, then look at the log.</p>
 </div>
 
 ---
@@ -155,7 +155,7 @@ end;</code></pre>
     <div class="task-number">5</div>
     <h3>Post an invoice and observe the task</h3>
   </div>
-  <p>Publish, then post a sales invoice. Switch to <strong>Copilot & AI Capabilities</strong> and watch the task appear automatically. Check the log to see how it processed the details.</p>
+  <p>Publish, then post a sales invoice. Switch to the <strong>Agents (preview)</strong> page and watch the task appear automatically. Check the log to see how it processed the details.</p>
 </div>
 
 ---

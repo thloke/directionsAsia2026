@@ -22,7 +22,7 @@ Freeform time. Take what you've built and make it relevant to your product — t
     <div class="task-number">1</div>
     <h3>Open your agent in the Designer</h3>
   </div>
-  <p>Navigate to <strong>Copilot & AI Capabilities</strong> and open your agent from Stage 2 in the Agent Designer.</p>
+  <p>Go to the <strong>Agents (preview)</strong> page and open your agent from Stage 2 in the Agent Designer.</p>
 </div>
 
 <div class="task-card">

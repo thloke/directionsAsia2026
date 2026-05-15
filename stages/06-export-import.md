@@ -50,7 +50,7 @@ Agents can be exported as XML and imported back in — handy for backups, sharin
     <div class="task-number">4</div>
     <h3>Start a new import</h3>
   </div>
-  <p>Back in <strong>Copilot & AI Capabilities</strong>, choose the <strong>Import agent definition</strong> action (you'll find it in the same area as the create button).</p>
+  <p>Back on the <strong>Agents (preview)</strong> page, choose the <strong>Import agent definition</strong> action (you'll find it in the same area as the create button).</p>
 </div>
 
 <div class="task-card">
