@@ -57,6 +57,14 @@ In this stage you will create a custom agent entirely through the Business Centr
 <div class="task-card">
   <div class="task-card-header">
     <div class="task-number">4</div>
+    <h3>Set the agent's profile</h3>
+  </div>
+  <p>Under <strong>Profile (role)</strong>, select <strong>Setup profile</strong> and choose <strong>Business Manager</strong>. This determines which UI pages and actions the agent can see and interact with.</p>
+</div>
+
+<div class="task-card">
+  <div class="task-card-header">
+    <div class="task-number">5</div>
     <h3>Set permissions</h3>
   </div>
   <p>Under <strong>Permissions</strong>, select <strong>Manage permissions</strong> and add the <code>SUPER</code> permission set. This gives the agent access to everything in the environment for the purposes of this workshop.</p>
@@ -68,7 +76,7 @@ In this stage you will create a custom agent entirely through the Business Centr
 
 <div class="task-card">
   <div class="task-card-header">
-    <div class="task-number">5</div>
+    <div class="task-number">6</div>
     <h3>Write the agent's instructions</h3>
   </div>
   <p>Under <strong>Instructions for the agent</strong>, select <strong>Edit instructions</strong> and enter the following:</p>
@@ -80,7 +88,7 @@ and provide a clear, concise summary to the user.</code></pre>
 
 <div class="task-card">
   <div class="task-card-header">
-    <div class="task-number">6</div>
+    <div class="task-number">7</div>
     <h3>Activate and save</h3>
   </div>
   <p>Turn on the <strong>Active</strong> toggle, then select <strong>Update</strong> to complete the setup.</p>
@@ -98,7 +106,7 @@ and provide a clear, concise summary to the user.</code></pre>
 
 <div class="task-card">
   <div class="task-card-header">
-    <div class="task-number">7</div>
+    <div class="task-number">8</div>
     <h3>Open Agent Tasks</h3>
   </div>
   <p>Use the search (<strong>Tell me</strong>) to open the <strong>Agent Tasks</strong> page, or navigate via the agent icon in the navigation bar and select your agent.</p>
@@ -106,7 +114,7 @@ and provide a clear, concise summary to the user.</code></pre>
 
 <div class="task-card">
   <div class="task-card-header">
-    <div class="task-number">8</div>
+    <div class="task-number">9</div>
     <h3>Run a task</h3>
   </div>
   <p>Select the <strong>Run task</strong> action. In the dialog, enter a simple task for the agent — for example:</p>
@@ -116,7 +124,7 @@ and provide a clear, concise summary to the user.</code></pre>
 
 <div class="task-card">
   <div class="task-card-header">
-    <div class="task-number">9</div>
+    <div class="task-number">10</div>
     <h3>Watch it run</h3>
   </div>
   <p>The task entry pane on the right of the UI will update in real time as the agent works through the task. Watch it execute and confirm you see a result appear.</p>
