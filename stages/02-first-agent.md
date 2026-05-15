@@ -126,3 +126,7 @@ and provide a clear, concise summary to the user.</code></pre>
   <div class="callout-title">&#10003; Stage complete when…</div>
   Your agent has processed a task and you can see its output in the task log.
 </div>
+
+## Stuck?
+
+- If you see **"Something went wrong"** in the task pane, do a force refresh (<strong>Ctrl + Shift + R</strong> on Windows, <strong>Cmd + Shift + R</strong> on Mac) and try running the task again
