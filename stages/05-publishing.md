@@ -11,7 +11,7 @@ next_title: "Export & Import"
 
 ## Overview
 
-This is your freeform time. Take what you've built and make it relevant to **your** product. There's no single right answer here — experiment, break things, and see how far you can push the agent.
+Freeform time. Take what you've built and make it relevant to your product — there's no right answer, just experimentation.
 
 ---
 
@@ -36,7 +36,7 @@ This is your freeform time. Take what you've built and make it relevant to **you
     <li>What should the agent be <em>good</em> at? What should it avoid?</li>
     <li>What tone or persona fits your product?</li>
   </ul>
-  <p>Keep instructions clear and specific — the more context you give the agent, the better it performs.</p>
+  <p>The more context you give it, the better it performs.</p>
 </div>
 
 <div class="task-card">
@@ -44,7 +44,7 @@ This is your freeform time. Take what you've built and make it relevant to **you
     <div class="task-number">3</div>
     <h3>Run a task that makes sense for your scenario</h3>
   </div>
-  <p>Give the agent a task that reflects a real workflow from your product domain. Watch the task pane and see how it reasons through the steps.</p>
+  <p>Give it a task that reflects a real workflow from your product. Watch how it reasons through it.</p>
 </div>
 
 ---
@@ -78,7 +78,7 @@ This is your freeform time. Take what you've built and make it relevant to **you
     <div class="task-number">6</div>
     <h3>Give the agent a task that touches your app</h3>
   </div>
-  <p>Ask the agent to do something that requires it to use a page or feature from your installed app. Check the task log entries (Stage 4) to see how it navigated there.</p>
+  <p>Give it something that touches a page from your app. Check the task log (Stage 4) to see how it got there.</p>
 </div>
 
 ---

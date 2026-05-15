@@ -9,9 +9,9 @@ prev_title: "Programmatic Tasks"
 
 ## Overview
 
-This is your sandbox. You've got an agent running in AL, a setup page for per-environment config, and the ability to fire tasks from code. Now connect all of that to **your own app**.
+Your sandbox. Agent in AL, setup page for config, programmatic task creation — now point it at your own app.
 
-There's no prescribed path here — the goal is to find a meaningful integration point between the agent and a real workflow in your extension.
+No set path here — find a meaningful integration point and go.
 
 ---
 
@@ -22,7 +22,7 @@ There's no prescribed path here — the goal is to find a meaningful integration
     <div class="task-number">1</div>
     <h3>Add your app as a dependency</h3>
   </div>
-  <p>In your agent extension's <code>app.json</code>, add your app as a dependency:</p>
+  <p>In <code>app.json</code>, add your app as a dependency:</p>
 
 ```json
 "dependencies": [
@@ -35,7 +35,7 @@ There's no prescribed path here — the goal is to find a meaningful integration
 ]
 ```
 
-  <p>Run <strong>AL: Download Symbols</strong> (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>) to pull in your app's symbols so you can reference its objects directly.</p>
+  <p>Then run <strong>AL: Download Symbols</strong> to pull in your app's symbols so you can reference its objects directly.</p>
 </div>
 
 <div class="task-card">
@@ -43,7 +43,7 @@ There's no prescribed path here — the goal is to find a meaningful integration
     <div class="task-number">2</div>
     <h3>Pick an integration point</h3>
   </div>
-  <p>Think about where the agent adds the most value in your app's workflow. Some ideas to get you started:</p>
+  <p>Think about where the agent adds most value in your workflow. Some ideas:</p>
   <ul>
     <li><strong>Action on a key page</strong> — add a "Send to Agent" button on your app's main list or card page, passing relevant record context in the task message</li>
     <li><strong>Business event trigger</strong> — subscribe to an event your app already raises (e.g. a custom document being posted or a status change) and auto-create a task</li>
@@ -57,7 +57,7 @@ There's no prescribed path here — the goal is to find a meaningful integration
     <div class="task-number">3</div>
     <h3>Write the task message with useful context</h3>
   </div>
-  <p>The richer the task message, the better the agent performs. Include record identifiers, relevant field values, and a clear instruction. For example:</p>
+  <p>The richer the task message, the better the agent performs. Include record IDs, relevant field values, and a clear instruction:</p>
 
 ```al
 AgentTaskMessageBuilder
@@ -75,7 +75,7 @@ AgentTaskMessageBuilder
     <div class="task-number">4</div>
     <h3>Update the agent instructions to know about your app</h3>
   </div>
-  <p>Inject context about your app's pages and data into the agent's instructions (via the setup page field from Stage 8, or directly in the instructions resource file). The more the agent understands your app's structure, the more accurately it can navigate to the right pages.</p>
+  <p>Add context about your app's pages and data to the agent instructions — via the setup page field from Stage 8, or directly in the resource file. The more it understands your app's structure, the more accurately it navigates.</p>
 </div>
 
 <div class="task-card">
@@ -83,8 +83,7 @@ AgentTaskMessageBuilder
     <div class="task-number">5</div>
     <h3>Publish, trigger, and inspect</h3>
   </div>
-  <p>Publish both extensions. Trigger your integration point and watch the agent work. Use the task log entries from Stage 4 to see exactly what pages it navigated to and what decisions it made.</p>
-  <p>Iterate on the instructions and task message until the agent handles the workflow reliably.</p>
+  <p>Publish both extensions, trigger your integration point, and watch it work. Use the task log from Stage 4 to see what pages it hit and what decisions it made. Iterate on the instructions and message until it handles the workflow reliably.</p>
 </div>
 
 ---

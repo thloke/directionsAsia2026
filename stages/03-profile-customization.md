@@ -11,7 +11,7 @@ next_title: "Testing & Debugging"
 
 ## Overview
 
-An agent can only interact with pages and actions that its profile exposes. In this stage you will use the **Customize profile** tool to hide an action from the agent's Role Centre, then re-run the original task to observe how the restriction affects the agent's behaviour.
+An agent can only interact with what its profile exposes. Here we'll hide an action from its role centre and see how that changes what it can do.
 
 ---
 
@@ -22,7 +22,7 @@ An agent can only interact with pages and actions that its profile exposes. In t
     <div class="task-number">1</div>
     <h3>Open the agent's design page</h3>
   </div>
-  <p>Navigate to the <strong>Agents (preview)</strong> page and select your agent from Stage 2.</p>
+  <p>Go to the <strong>Agents (preview)</strong> page and open your agent from Stage 2.</p>
 </div>
 
 <div class="task-card">
@@ -33,7 +33,7 @@ An agent can only interact with pages and actions that its profile exposes. In t
   <p>In the agent page, select <strong>Design</strong> &gt; <strong>Customize profile</strong>. This opens the Business Central personalization experience in a new window, scoped to your agent's profile.</p>
   <div class="callout callout-info" style="margin-top:0.75rem; margin-bottom:0;">
     <div class="callout-title">&#8505; What you're seeing</div>
-    The <strong>Customizing</strong> banner at the top of the new window confirms you are editing the agent's profile — not your own personal view. Changes here apply to all users (and agents) on this profile.
+    The <strong>Customizing</strong> banner at the top of the new window confirms you're editing the agent's profile — not your own personal view. Changes apply to all users on this profile.
   </div>
 </div>
 
@@ -93,8 +93,7 @@ An agent can only interact with pages and actions that its profile exposes. In t
     <div class="task-number">7</div>
     <h3>Observe the result</h3>
   </div>
-  <p>Watch the task pane on the right. This time the agent should be unable to navigate to the Customer List and will report that it cannot complete the task.</p>
-  <p>This demonstrates how profile customization acts as a guardrail — the agent is bounded by exactly what its profile exposes.</p>
+  <p>Watch the task pane — this time the agent shouldn't be able to get to the Customer List. It's a good illustration of how the profile acts as a guardrail.</p>
 </div>
 
 <div class="callout callout-tip">

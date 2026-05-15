@@ -16,7 +16,7 @@ next_title: "Customizing the Setup Page"
   From this stage onwards the workshop shifts to writing AL code. If you're not a developer — or you'd simply like more time to experiment with your agent in the Business Central UI — <strong>that's completely fine!</strong> Head back to <a href="{{ '/stages/05-publishing/' | relative_url }}">Stage 5</a> and keep iterating on your agent's instructions and profile. There's no obligation to continue beyond this point.
 </div>
 
-A UI-built agent lives only in the environment where it was created.Moving it to AL lets you version-control it, deploy it to any environment, and eventually distribute it via AppSource. In this stage you'll use the exported XML from Stage 6 as the source of truth and recreate the same agent as a proper AL extension.
+A UI-built agent only lives in the environment where it was created. Moving it to AL means you can version control it, deploy to any environment, and eventually distribute it via AppSource. Use the XML from Stage 6 as your reference — you'll recreate the same agent as a proper AL extension.
 
 <div class="callout callout-tip">
   <div class="callout-title">&#128214; Docs reference</div>
@@ -33,8 +33,8 @@ A UI-built agent lives only in the environment where it was created.Moving it to
     <div class="task-number">1</div>
     <h3>Create a new AL project using the Agent template</h3>
   </div>
-  <p>In Visual Studio Code, press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and run <strong>AL: New Project</strong>. When prompted to choose a template, select <strong>Agent</strong>.</p>
-  <p>Give the project a name (e.g. <code>MyWorkshopAgent</code>) and choose a folder for it.</p>
+  <p>In VS Code, hit <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and run <strong>AL: New Project</strong>. When prompted for a template, pick <strong>Agent</strong>.</p>
+  <p>Name it something like <code>MyWorkshopAgent</code> and choose a folder.</p>
 </div>
 
 <div class="task-card">
@@ -42,7 +42,7 @@ A UI-built agent lives only in the environment where it was created.Moving it to
     <div class="task-number">2</div>
     <h3>Set the runtime version in app.json</h3>
   </div>
-  <p>Open <code>app.json</code> in the project root. Find the <code>"runtime"</code> field and set it to <code>"17.0"</code> — this is required for the Agent SDK interfaces to be available.</p>
+  <p>Open <code>app.json</code> and set <code>"runtime"</code> to <code>"17.0"</code> — you need this for the Agent SDK interfaces to be available.</p>
 <pre><code>{
   "id": "...",
   "name": "MyWorkshopAgent",
@@ -56,7 +56,7 @@ A UI-built agent lives only in the environment where it was created.Moving it to
     <div class="task-number">3</div>
     <h3>Configure launch.json to point at your environment</h3>
   </div>
-  <p>Open <code>.vscode/launch.json</code>. Update the configuration to target your workshop environment — you'll need the environment name from your printed handout.</p>
+  <p>Open <code>.vscode/launch.json</code> and update it to target your environment — grab the environment name and tenant ID from your handout.</p>
 <pre><code>{
   "version": "0.2.0",
   "configurations": [
@@ -71,7 +71,7 @@ A UI-built agent lives only in the environment where it was created.Moving it to
     }
   ]
 }</code></pre>
-  <p>Replace <code>&lt;your-environment-name&gt;</code> with the environment name from your handout (the same one used in the URL: <code>businesscentral.dynamics.com/&lt;environmentname&gt;</code>).</p>
+  <p>Replace the placeholder values with what's on your handout (same environment name as the URL).</p>
 </div>
 
 <div class="task-card">
@@ -79,7 +79,7 @@ A UI-built agent lives only in the environment where it was created.Moving it to
     <div class="task-number">4</div>
     <h3>Download symbols</h3>
   </div>
-  <p>Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and run <strong>AL: Download Symbols</strong>. VS Code will connect to your environment and pull down the symbol packages needed to compile against it. You'll be prompted to sign in if you haven't already.</p>
+  <p>Run <strong>AL: Download Symbols</strong> from the command palette. VS Code will connect to your environment and pull down the symbols needed to compile. You'll be asked to sign in if needed.</p>
 </div>
 
 <div class="task-card">
@@ -87,7 +87,7 @@ A UI-built agent lives only in the environment where it was created.Moving it to
     <div class="task-number">5</div>
     <h3>Explore the generated structure</h3>
   </div>
-  <p>The template generates the skeleton of a working agent. The key files are:</p>
+  <p>The template gives you a full working skeleton. Key files:</p>
   <ul>
     <li><strong>AgentMetadataProvider enum extension</strong> — registers your agent type</li>
     <li><strong>AgentFactory codeunit</strong> — implements <code>IAgentFactory</code> (default profile, permissions, setup page)</li>
@@ -103,15 +103,14 @@ A UI-built agent lives only in the environment where it was created.Moving it to
 
 ## Part 2 — Adapt the Template to Match Your Exported Agent
 
-Open the XML file you exported in Stage 6 alongside VS Code — it is your reference for the values in the following steps.
+Keep the XML from Stage 6 open alongside VS Code — you'll use it as a reference for the next few steps.
 
 <div class="task-card">
   <div class="task-card-header">
     <div class="task-number">6</div>
     <h3>Copy the instructions into the resource file</h3>
   </div>
-  <p>Find the instructions text inside the exported XML and paste it into the <strong>instructions .txt resource file</strong> generated by the template, replacing the placeholder text.</p>
-  <p>The <code>IAgentFactory</code> implementation loads this file and applies it when a new agent instance is created.</p>
+  <p>Find the instructions text in the XML and paste it into the <strong>instructions .txt resource file</strong> generated by the template, replacing the placeholder. The <code>IAgentFactory</code> loads this on agent creation.</p>
 </div>
 
 <div class="task-card">
@@ -133,8 +132,7 @@ end;</code></pre>
     <div class="task-number">8</div>
     <h3>Set the default permissions</h3>
   </div>
-  <p>In the <strong>AgentFactory</strong> codeunit, find the <code>GetDefaultAccessControls</code> method. Add the permission sets listed in the XML (the template uses <code>D365 BASIC</code> as a placeholder — replace or extend it to match).</p>
-  <p>For the workshop agent you set up SUPER in Stage 2 — for production use a least-privilege set instead.</p>
+  <p>In <strong>AgentFactory</strong>, update <code>GetDefaultAccessControls</code> with the permission sets from the XML. The template has <code>D365 BASIC</code> as a placeholder — swap it out. We used SUPER for the workshop, but you'd normally go least-privilege in production.</p>
 </div>
 
 <div class="task-card">
@@ -142,7 +140,7 @@ end;</code></pre>
     <div class="task-number">9</div>
     <h3>Update the display name and initials</h3>
   </div>
-  <p>In the <strong>Setup page</strong>, update the label constants for display name and initials to match your agent. These are the values shown in the BC UI when the agent is active.</p>
+  <p>In the <strong>Setup page</strong>, update the display name and initials to match your agent.</p>
 </div>
 
 ---
@@ -162,7 +160,7 @@ end;</code></pre>
     <div class="task-number">11</div>
     <h3>Create an instance of your AL agent</h3>
   </div>
-  <p>In Business Central, navigate to <strong>Copilot & AI Capabilities</strong>. You should see your new agent type listed. Select it and follow the setup dialog to create an instance — it will apply the profile and permissions you defined in AL automatically.</p>
+  <p>Go to <strong>Copilot & AI Capabilities</strong> in BC — your agent type should be listed. Select it and run through the setup dialog. It'll apply the profile and permissions from your AL code automatically.</p>
 </div>
 
 <div class="task-card">
@@ -170,12 +168,12 @@ end;</code></pre>
     <div class="task-number">12</div>
     <h3>Run the same task and compare</h3>
   </div>
-  <p>Give your AL agent the same task you ran against the UI-built agent in Stage 2. Watch the task pane and check the log entries. The behaviour should be identical — the agent is simply defined in code now rather than the UI.</p>
+  <p>Give it the same task from Stage 2 and check the log entries. The behaviour should be identical — it's the same agent, just defined in code now.</p>
 </div>
 
 <div class="callout callout-tip">
   <div class="callout-title">💡 Why this matters</div>
-  Once your agent is in AL you can commit it to source control, run it through a CI/CD pipeline, promote it across environments with a <code>.app</code> file, and eventually submit it to AppSource — all without ever touching the Business Central UI.
+  Once it's in AL you can commit to source control, run it through CI/CD, promote it with a <code>.app</code> file, and eventually submit to AppSource — no BC UI needed.
 </div>
 
 <div class="callout callout-tip">

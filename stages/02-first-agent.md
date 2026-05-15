@@ -11,7 +11,7 @@ next_title: "Tools & Actions"
 
 ## Overview
 
-In this stage you will create a custom agent entirely through the Business Central UI — no AL code needed. By the end you will have a live, active agent and have triggered it to run its first task.
+Everything in this stage is UI only — no AL needed. By the end you'll have a working agent that's run its first task.
 
 <div class="callout callout-info">
   <div class="callout-title">&#8505; Before You Start</div>
@@ -70,7 +70,7 @@ In this stage you will create a custom agent entirely through the Business Centr
   <p>Under <strong>Permissions</strong>, select <strong>Manage permissions</strong> and add the <code>SUPER</code> permission set. This gives the agent access to everything in the environment for the purposes of this workshop.</p>
   <div class="callout callout-warning" style="margin-top:0.75rem; margin-bottom:0;">
     <div class="callout-title">&#9888; Workshop Only</div>
-    Using SUPER is fine for a sandbox workshop. In production you would assign only the minimum permissions the agent needs.
+    Fine for a sandbox. In production, assign only what the agent actually needs.
   </div>
 </div>
 
@@ -83,7 +83,7 @@ In this stage you will create a custom agent entirely through the Business Centr
   <pre><code>You are a helpful Business Central assistant.
 When given a task, look up the requested information
 and provide a clear, concise summary to the user.</code></pre>
-  <p>Keep instructions short and specific — you will refine them in later stages.</p>
+  <p>Keep them short and specific — you'll refine them in later stages.</p>
 </div>
 
 <div class="task-card">
@@ -92,7 +92,7 @@ and provide a clear, concise summary to the user.</code></pre>
     <h3>Activate and save</h3>
   </div>
   <p>Turn on the <strong>Active</strong> toggle, then select <strong>Update</strong> to complete the setup.</p>
-  <p>The agent icon in the navigation bar will change appearance to show the agent is now active.</p>
+  <p>The agent icon in the navigation bar should change to reflect this.</p>
 </div>
 
 <div class="callout callout-tip">
@@ -111,7 +111,7 @@ and provide a clear, concise summary to the user.</code></pre>
   </div>
   <p>Select the <strong>Run task</strong> action. In the dialog, enter a simple task for the agent — for example:</p>
   <pre><code>List the top 5 customers by name.</code></pre>
-  <p>Confirm and watch the agent pick up and process the task.</p>
+  <p>Confirm and hit <strong>Start</strong> — watch the agent pick it up.</p>
 </div>
 
 <div class="task-card">
@@ -119,7 +119,7 @@ and provide a clear, concise summary to the user.</code></pre>
     <div class="task-number">9</div>
     <h3>Watch it run</h3>
   </div>
-  <p>The task entry pane on the right of the UI will update in real time as the agent works through the task. Watch it execute and confirm you see a result appear.</p>
+  <p>The task pane on the right updates in real time. Watch it work through the steps and check you see a result.</p>
 </div>
 
 <div class="callout callout-tip">

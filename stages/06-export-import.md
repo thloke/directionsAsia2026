@@ -11,7 +11,7 @@ next_title: "Agent in AL"
 
 ## Overview
 
-Business Central agents can be exported as an XML definition file and imported into the same — or a different — environment. This is useful for backing up a working agent, sharing configurations, or promoting an agent between environments.
+Agents can be exported as XML and imported back in — handy for backups, sharing configs, or promoting between environments.
 
 ---
 
@@ -30,8 +30,7 @@ Business Central agents can be exported as an XML definition file and imported i
     <div class="task-number">2</div>
     <h3>Export the agent definition</h3>
   </div>
-  <p>From the action bar, choose <strong>Export agent definition</strong>. Business Central will generate and download an <strong>XML file</strong> containing the full agent configuration — name, instructions, profile, permissions, and capabilities.</p>
-  <p>Save the file somewhere you can find it in the next part.</p>
+  <p>From the action bar, choose <strong>Export agent definition</strong>. BC generates and downloads an XML file with the full agent config — name, instructions, profile, permissions. Save it somewhere you can find it.</p>
 </div>
 
 <div class="task-card">
@@ -39,7 +38,7 @@ Business Central agents can be exported as an XML definition file and imported i
     <div class="task-number">3</div>
     <h3>Inspect the XML</h3>
   </div>
-  <p>Open the downloaded XML file in a text editor (Notepad is fine). Have a look at the structure — can you spot the instructions you wrote? The profile name? This is the portable representation of your agent.</p>
+  <p>Open it in a text editor (Notepad is fine) and have a look at the structure — can you spot the instructions you wrote? The profile name? This is the portable representation of your agent.</p>
 </div>
 
 ---
@@ -59,7 +58,7 @@ Business Central agents can be exported as an XML definition file and imported i
     <div class="task-number">5</div>
     <h3>Select the XML file</h3>
   </div>
-  <p>When prompted, select the XML file you exported in Part 1. Business Central will read the definition and create a new agent from it.</p>
+  <p>Select the XML file you exported in Part 1 — BC will read it and create a new agent from it.</p>
 </div>
 
 <div class="task-card">
@@ -67,12 +66,12 @@ Business Central agents can be exported as an XML definition file and imported i
     <div class="task-number">6</div>
     <h3>Verify the imported agent</h3>
   </div>
-  <p>Open the newly imported agent and confirm that the instructions, profile, and permissions all match the original. Run a quick task to make sure it behaves the same way.</p>
+  <p>Open the new agent and check that the instructions, profile and permissions match the original. Run a quick task to confirm it behaves the same way.</p>
 </div>
 
 <div class="callout callout-tip">
   <div class="callout-title">💡 What this enables</div>
-  The export/import flow is how you can move an agent between environments — for example from a sandbox to production — without having to manually recreate the configuration. The XML file is also human-readable, so it can be stored in source control alongside your AL code.
+  This is how you move an agent between environments — sandbox to production — without recreating it by hand. The XML is readable enough to store in source control alongside your AL code too.
 </div>
 
 <div class="callout callout-tip">

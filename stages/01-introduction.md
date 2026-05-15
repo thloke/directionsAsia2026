@@ -9,7 +9,7 @@ next_title: "Your First Agent"
 
 ## Access Your Environment
 
-Your facilitator will provide you with a printed handout containing your login credentials.
+Your facilitator will hand out login credentials on paper.
 
 ## Task 1 — Sign In
 

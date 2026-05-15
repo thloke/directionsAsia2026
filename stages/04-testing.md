@@ -11,7 +11,7 @@ next_title: "Make It Your Own"
 
 ## Overview
 
-Every task your agent runs produces a detailed log of its reasoning and actions. In this stage you will open the log entries for a previous task and learn how to read what the agent did step by step.
+Every task produces a log of what the agent did — each step, each decision. Here we'll dig into one.
 
 ---
 
@@ -20,7 +20,7 @@ Every task your agent runs produces a detailed log of its reasoning and actions.
     <div class="task-number">1</div>
     <h3>Open the Agent Tasks page</h3>
   </div>
-  <p>Navigate to the <strong>Agent Tasks</strong> page for your agent. You should see the tasks you ran in Stages 2 and 3.</p>
+  <p>Go to the <strong>Agent Tasks</strong> page. You should see the tasks from Stages 2 and 3.</p>
 </div>
 
 <div class="task-card">
@@ -56,8 +56,7 @@ Every task your agent runs produces a detailed log of its reasoning and actions.
     <div class="task-number">5</div>
     <h3>View the details</h3>
   </div>
-  <p>Choose the <strong>View details</strong> action from the action bar. This shows the full detail of that specific step — what the agent was looking at, what it found, and what it decided to do next.</p>
-  <p>Try this on a few different entries to get a feel for how the agent reasons through a task.</p>
+  <p>Use the <strong>View details</strong> action to see the full breakdown of that step — what the agent was looking at, what it found, what it decided to do next. Try a few different entries.</p>
 </div>
 
 <div class="callout callout-tip">

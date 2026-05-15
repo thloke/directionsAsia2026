@@ -11,7 +11,7 @@ next_title: "Bring Your Own App"
 
 ## Overview
 
-So far, tasks have been kicked off manually from the Business Central UI. In a real product you'll want the agent to spring into action automatically — when a user clicks a button, when a document is posted, or when something interesting happens in the system. In this stage you'll wire up your agent to AL events using the `Agent Task Builder` API.
+So far tasks have been triggered manually. In practice you'll want the agent to kick off automatically — a button click, a document posting, a status change. Here we'll wire that up using the `Agent Task Builder` API.
 
 <div class="callout callout-tip">
   <div class="callout-title">&#128214; Docs reference</div>
@@ -29,7 +29,7 @@ The simplest integration: a button on a page that sends a task to your agent.
     <div class="task-number">1</div>
     <h3>Add a page extension with an agent action</h3>
   </div>
-  <p>Create a page extension that adds a <strong>Send to Agent</strong> action. Use <code>Agent Task Builder</code> to build and fire the task. <code>AgentUserSecurityId</code> is the <code>User Security ID</code> stored in your setup table — retrieve it from there before calling <code>Initialize</code>.</p>
+  <p>Create a page extension with a <strong>Send to Agent</strong> action. <code>AgentUserSecurityId</code> is the <code>User Security ID</code> from your setup table — retrieve it before calling <code>Initialize</code>.</p>
 <pre><code>pageextension 50200 "Sales Order Agent Action" extends "Sales Order"
 {
     actions
@@ -71,21 +71,21 @@ The simplest integration: a button on a page that sends a task to your agent.
     <div class="task-number">2</div>
     <h3>Publish and test the action</h3>
   </div>
-  <p>Publish (<kbd>F5</kbd>), open any sales order, and click <strong>Send to Agent</strong>. Navigate to <strong>Copilot & AI Capabilities</strong> and confirm a new task appeared for your agent. Approve and run it, then check the task log.</p>
+  <p>Publish, open a sales order, and try the <strong>Send to Agent</strong> action. Go to <strong>Copilot & AI Capabilities</strong> and check a task appeared. Approve and run it, then look at the log.</p>
 </div>
 
 ---
 
 ## Part 2 — Skip the Approval Step
 
-By default a created task waits for a user to approve it before the agent starts. For trusted, internal triggers you can bypass this.
+By default a new task waits for approval before the agent starts. For internal, trusted triggers you can skip that.
 
 <div class="task-card">
   <div class="task-card-header">
     <div class="task-number">3</div>
     <h3>Set RequiresReview to false</h3>
   </div>
-  <p>Update your action to use <code>Agent Task Message Builder</code> directly and call <code>SetRequiresReview(false)</code>. The agent will start immediately when the task is created.</p>
+  <p>Update the action to use <code>Agent Task Message Builder</code> directly and call <code>SetRequiresReview(false)</code> — the agent will start as soon as the task is created.</p>
 <pre><code>var
     AgentTaskBuilder: Codeunit "Agent Task Builder";
     AgentTaskMessageBuilder: Codeunit "Agent Task Message Builder";
@@ -123,7 +123,7 @@ Instead of a button, let the system create the task automatically when something
     <div class="task-number">4</div>
     <h3>Subscribe to a posting event</h3>
   </div>
-  <p>Add an event subscriber that fires after a sales invoice is posted. The agent gets notified automatically — no user action required.</p>
+  <p>Add an event subscriber that fires after a sales invoice posts. No user action needed — the agent kicks off automatically.</p>
 <pre><code>[EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Post",
     'OnAfterSalesInvHeaderInsert', '', false, false)]
 local procedure OnAfterSalesInvoicePost(var SalesInvHeader: Record "Sales Invoice Header")
@@ -155,7 +155,7 @@ end;</code></pre>
     <div class="task-number">5</div>
     <h3>Post an invoice and observe the task</h3>
   </div>
-  <p>Publish, then post a sales invoice in Business Central. Switch to <strong>Copilot & AI Capabilities</strong> and watch a task appear automatically for your agent. Check the task log to see how it processed the invoice details.</p>
+  <p>Publish, then post a sales invoice. Switch to <strong>Copilot & AI Capabilities</strong> and watch the task appear automatically. Check the log to see how it processed the details.</p>
 </div>
 
 ---
@@ -167,7 +167,7 @@ end;</code></pre>
     <div class="task-number">6</div>
     <h3>Store the task ID alongside your record</h3>
   </div>
-  <p>For robust tracking, add a <code>Agent Task ID</code> field (BigInteger) to the relevant table and save the task ID when you create the task:</p>
+  <p>For proper tracking, add an <code>Agent Task ID</code> field (BigInteger) to the relevant table and save the ID on task creation:</p>
 <pre><code>AgentTask := AgentTaskBuilder
     .Initialize(MyAgentSetup."User Security ID", 'Review Sales Order')
     .AddTaskMessage(AgentTaskMessageBuilder)
