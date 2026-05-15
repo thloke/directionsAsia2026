@@ -5,6 +5,8 @@ stage_num: 6
 description: "Export your agent definition to XML and import it into a new agent."
 prev_stage: /stages/05-publishing/
 prev_title: "Make It Your Own"
+next_stage: /stages/07-al-agent/
+next_title: "Agent in AL"
 ---
 
 ## Overview

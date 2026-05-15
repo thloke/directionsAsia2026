@@ -38,3 +38,8 @@ stages:
     url: "/stages/06-export-import/"
     description: "Export your agent as an XML definition and import it into a new agent."
     icon: "📤"
+  - num: 7
+    title: "Agent in AL"
+    url: "/stages/07-al-agent/"
+    description: "Convert your exported agent to a deployable AL extension."
+    icon: "💻"
