@@ -30,14 +30,11 @@ In this stage you'll add a custom field to your agent's setup page and inject it
     <h3>Add a field to your setup table</h3>
   </div>
   <p>Open your agent's setup table (the one with <code>User Security ID</code> as the primary key). Add a new field to hold the per-environment value — for example, a short description of what product this agent is supporting.</p>
-
-```al
-field(20; "Product Description"; Text[250])
+<pre><code>field(20; "Product Description"; Text[250])
 {
     Caption = 'Product Description';
     DataClassification = CustomerContent;
-}
-```
+}</code></pre>
 </div>
 
 ---
@@ -50,9 +47,7 @@ field(20; "Product Description"; Text[250])
     <h3>Add the field to the setup page layout</h3>
   </div>
   <p>Open your setup page. Below the standard <code>Agent Setup Part</code>, add a group with your new field. Setting <code>IsUpdated := true</code> on validate ensures the <strong>Update</strong> button becomes active when the user changes the value.</p>
-
-```al
-group(AdditionalConfiguration)
+<pre><code>group(AdditionalConfiguration)
 {
     Caption = 'Additional Configuration';
 
@@ -66,8 +61,7 @@ group(AdditionalConfiguration)
             IsUpdated := true;
         end;
     }
-}
-```
+}</code></pre>
 </div>
 
 <div class="task-card">
@@ -76,10 +70,7 @@ group(AdditionalConfiguration)
     <h3>Save the custom field in SaveCustomProperties</h3>
   </div>
   <p>In your <code>SaveCustomProperties</code> procedure, make sure the new field is written to the database alongside the existing ones.</p>
-
-```al
-MyAgentSetupRecord."Product Description" := TempMyAgentSetup."Product Description";
-```
+<pre><code>MyAgentSetupRecord."Product Description" := TempMyAgentSetup."Product Description";</code></pre>
 </div>
 
 ---
@@ -92,23 +83,16 @@ MyAgentSetupRecord."Product Description" := TempMyAgentSetup."Product Descriptio
     <h3>Switch from static to dynamic instructions</h3>
   </div>
   <p>In your <code>SaveSetupRecord</code> procedure, replace the static instructions call with one that reads the custom field and merges it in. For example:</p>
-
-```al
-local procedure GetInstructions(ProductDescription: Text): Text
+<pre><code>local procedure GetInstructions(ProductDescription: Text): Text
 var
     InstructionsTxt: Label 'You are an agent for a Business Central customer.\\Product context: %1\\Your role is to help users navigate and operate the system efficiently.', Comment = '%1 = product description';
 begin
     exit(StrSubstNo(InstructionsTxt, ProductDescription));
-end;
-```
-
+end;</code></pre>
   <p>Then pass the value when calling <code>Agent.SetInstructions</code>:</p>
-
-```al
-if IsNewAgent then
+<pre><code>if IsNewAgent then
     Agent.SetInstructions(TempMyAgentSetup."User Security ID",
-        GetInstructions(TempMyAgentSetup."Product Description"));
-```
+        GetInstructions(TempMyAgentSetup."Product Description"));</code></pre>
 </div>
 
 ---

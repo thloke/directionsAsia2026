@@ -43,15 +43,12 @@ A UI-built agent lives only in the environment where it was created.Moving it to
     <h3>Set the runtime version in app.json</h3>
   </div>
   <p>Open <code>app.json</code> in the project root. Find the <code>"runtime"</code> field and set it to <code>"17.0"</code> — this is required for the Agent SDK interfaces to be available.</p>
-
-```json
-{
+<pre><code>{
   "id": "...",
   "name": "MyWorkshopAgent",
   "runtime": "17.0",
   ...
-}
-```
+}</code></pre>
 </div>
 
 <div class="task-card">
@@ -60,9 +57,7 @@ A UI-built agent lives only in the environment where it was created.Moving it to
     <h3>Configure launch.json to point at your environment</h3>
   </div>
   <p>Open <code>.vscode/launch.json</code>. Update the configuration to target your workshop environment — you'll need the environment name from your printed handout.</p>
-
-```json
-{
+<pre><code>{
   "version": "0.2.0",
   "configurations": [
     {
@@ -70,14 +65,12 @@ A UI-built agent lives only in the environment where it was created.Moving it to
       "request": "launch",
       "name": "My Workshop Environment",
       "environmentType": "Sandbox",
-      "environmentName": "<your-environment-name>",
-      "tenant": "<your-tenant-id>",
+      "environmentName": "&lt;your-environment-name&gt;",
+      "tenant": "&lt;your-tenant-id&gt;",
       "authentication": "UserPassword"
     }
   ]
-}
-```
-
+}</code></pre>
   <p>Replace <code>&lt;your-environment-name&gt;</code> with the environment name from your handout (the same one used in the URL: <code>businesscentral.dynamics.com/&lt;environmentname&gt;</code>).</p>
 </div>
 
@@ -127,15 +120,12 @@ Open the XML file you exported in Stage 6 alongside VS Code — it is your refer
     <h3>Set the default profile</h3>
   </div>
   <p>In the <strong>AgentFactory</strong> codeunit, find the <code>GetDefaultProfile</code> method. Update the <code>Profile ID</code> to match the profile from your exported agent (e.g. <code>'BUSINESS MANAGER'</code>).</p>
-
-```al
-procedure GetDefaultProfile(var TempAllProfile: Record "All Profile" temporary)
+<pre><code>procedure GetDefaultProfile(var TempAllProfile: Record "All Profile" temporary)
 begin
     TempAllProfile."Profile ID" := 'BUSINESS MANAGER';
     TempAllProfile."App ID" := SystemApplicationAppId;
     TempAllProfile.Insert();
-end;
-```
+end;</code></pre>
 </div>
 
 <div class="task-card">

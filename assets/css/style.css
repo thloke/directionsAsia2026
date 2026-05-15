@@ -270,7 +270,8 @@ body {
   border-radius: var(--radius);
 }
 
-.content-body pre {
+.content-body pre,
+.task-card pre {
   background: #1E1E1E;
   color: #D4D4D4;
   padding: 1.25rem 1.5rem;
@@ -281,7 +282,8 @@ body {
   line-height: 1.55;
 }
 
-.content-body pre code {
+.content-body pre code,
+.task-card pre code {
   background: transparent;
   color: inherit;
   padding: 0;

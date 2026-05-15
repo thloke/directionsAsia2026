@@ -30,9 +30,7 @@ The simplest integration: a button on a page that sends a task to your agent.
     <h3>Add a page extension with an agent action</h3>
   </div>
   <p>Create a page extension that adds a <strong>Send to Agent</strong> action. Use <code>Agent Task Builder</code> to build and fire the task. <code>AgentUserSecurityId</code> is the <code>User Security ID</code> stored in your setup table — retrieve it from there before calling <code>Initialize</code>.</p>
-
-```al
-pageextension 50200 "Sales Order Agent Action" extends "Sales Order"
+<pre><code>pageextension 50200 "Sales Order Agent Action" extends "Sales Order"
 {
     actions
     {
@@ -65,8 +63,7 @@ pageextension 50200 "Sales Order Agent Action" extends "Sales Order"
             }
         }
     }
-}
-```
+}</code></pre>
 </div>
 
 <div class="task-card">
@@ -89,9 +86,7 @@ By default a created task waits for a user to approve it before the agent starts
     <h3>Set RequiresReview to false</h3>
   </div>
   <p>Update your action to use <code>Agent Task Message Builder</code> directly and call <code>SetRequiresReview(false)</code>. The agent will start immediately when the task is created.</p>
-
-```al
-var
+<pre><code>var
     AgentTaskBuilder: Codeunit "Agent Task Builder";
     AgentTaskMessageBuilder: Codeunit "Agent Task Message Builder";
     AgentTask: Record "Agent Task";
@@ -109,8 +104,7 @@ begin
         .Initialize(MyAgentSetup."User Security ID", 'Review Sales Order')
         .AddTaskMessage(AgentTaskMessageBuilder)
         .Create();
-end;
-```
+end;</code></pre>
 
 <div class="callout callout-warning" style="margin-top:0.75rem;">
   <div class="callout-title">&#9888;&#65039; Only skip review for trusted sources</div>
@@ -130,9 +124,7 @@ Instead of a button, let the system create the task automatically when something
     <h3>Subscribe to a posting event</h3>
   </div>
   <p>Add an event subscriber that fires after a sales invoice is posted. The agent gets notified automatically — no user action required.</p>
-
-```al
-[EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Post",
+<pre><code>[EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Post",
     'OnAfterSalesInvHeaderInsert', '', false, false)]
 local procedure OnAfterSalesInvoicePost(var SalesInvHeader: Record "Sales Invoice Header")
 var
@@ -155,8 +147,7 @@ begin
         .Initialize(MyAgentSetup."User Security ID", 'Review Posted Invoice')
         .AddTaskMessage(AgentTaskMessageBuilder)
         .Create();
-end;
-```
+end;</code></pre>
 </div>
 
 <div class="task-card">
@@ -177,21 +168,15 @@ end;
     <h3>Store the task ID alongside your record</h3>
   </div>
   <p>For robust tracking, add a <code>Agent Task ID</code> field (BigInteger) to the relevant table and save the task ID when you create the task:</p>
-
-```al
-AgentTask := AgentTaskBuilder
+<pre><code>AgentTask := AgentTaskBuilder
     .Initialize(MyAgentSetup."User Security ID", 'Review Sales Order')
     .AddTaskMessage(AgentTaskMessageBuilder)
     .Create();
 
 Rec."Agent Task ID" := AgentTask.ID;
-Rec.Modify();
-```
-
+Rec.Modify();</code></pre>
   <p>Later you can check its status:</p>
-
-```al
-var
+<pre><code>var
     AgentTaskCU: Codeunit "Agent Task";
     AgentTaskRec: Record "Agent Task";
 begin
@@ -201,8 +186,7 @@ begin
         Message('Still running...')
     else if AgentTaskCU.IsTaskCompleted(AgentTaskRec) then
         Message('Done!');
-end;
-```
+end;</code></pre>
 </div>
 
 <div class="callout callout-tip">
