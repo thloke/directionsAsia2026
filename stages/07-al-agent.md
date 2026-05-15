@@ -9,7 +9,12 @@ prev_title: "Export & Import"
 
 ## Overview
 
-A UI-built agent lives only in the environment where it was created. Moving it to AL lets you version-control it, deploy it to any environment, and eventually distribute it via AppSource. In this stage you'll use the exported XML from Stage 6 as the source of truth and recreate the same agent as a proper AL extension.
+<div class="callout callout-warning">
+  <div class="callout-title">&#128104;&#8205;&#128187; Developer track starts here</div>
+  From this stage onwards the workshop shifts to writing AL code. If you're not a developer — or you'd simply like more time to experiment with your agent in the Business Central UI — <strong>that's completely fine!</strong> Head back to <a href="{{ '/stages/05-publishing/' | relative_url }}">Stage 5</a> and keep iterating on your agent's instructions and profile. There's no obligation to continue beyond this point.
+</div>
+
+A UI-built agent lives only in the environment where it was created.Moving it to AL lets you version-control it, deploy it to any environment, and eventually distribute it via AppSource. In this stage you'll use the exported XML from Stage 6 as the source of truth and recreate the same agent as a proper AL extension.
 
 <div class="callout callout-tip">
   <div class="callout-title">&#128214; Docs reference</div>
