@@ -22,7 +22,7 @@ Agents can be exported as XML and imported back in — handy for backups, sharin
     <div class="task-number">1</div>
     <h3>Open your agent card</h3>
   </div>
-  <p>Navigate to <strong>Copilot & AI Capabilities</strong> and open the agent you configured in the earlier stages.</p>
+  <p>Go to the <strong>Agents (preview)</strong> page and open the agent you configured in the earlier stages.</p>
 </div>
 
 <div class="task-card">
