@@ -27,7 +27,8 @@ In this stage you will create a custom agent entirely through the Business Centr
     <div class="task-number">1</div>
     <h3>Open the agent designer</h3>
   </div>
-  <p>In the top-right navigation bar of your Role Centre, look for the <strong>Agent</strong> icon (a small robot / person icon). Select it, then choose <strong>Create</strong>.</p>
+  <p>In the top-right navigation bar of your Role Centre, look for the <strong>+</strong> (plus) icon. Select it, then choose <strong>Agent</strong> &gt; <strong>Create</strong>.</p>
+  <p><img src="{{ '/assets/images/create_icon.png' | relative_url }}" alt="The plus icon used to create a new agent" style="max-width:100%; border:1px solid var(--border); border-radius:var(--radius-lg); margin-top:0.75rem;" /></p>
 </div>
 
 <div class="task-card">
