@@ -19,10 +19,10 @@ stages:
     description: "Create a basic Business Central agent from scratch."
     icon: "🤖"
   - num: 3
-    title: "Tools & Actions"
+    title: "Customizing the Agent's Profile"
     url: "/stages/03-tools-actions/"
-    description: "Extend your agent with custom tools and AL actions."
-    icon: "🔧"
+    description: "Use profile customization to control what your agent can see and access."
+    icon: "🎨"
   - num: 4
     title: "Testing & Debugging"
     url: "/stages/04-testing/"
