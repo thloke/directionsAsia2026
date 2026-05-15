@@ -53,3 +53,8 @@ stages:
     url: "/stages/09-programmatic-tasks/"
     description: "Trigger agent tasks from page actions and business events using AL code."
     icon: "⚡"
+  - num: 10
+    title: "Bring Your Own App"
+    url: "/stages/10-bring-your-own-app/"
+    description: "Integrate your agent with your own AL extension end to end."
+    icon: "🔌"

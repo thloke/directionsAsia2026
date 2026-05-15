@@ -5,6 +5,8 @@ stage_num: 9
 description: "Trigger agent tasks from page actions and business events using AL code."
 prev_stage: /stages/08-setup-page/
 prev_title: "Customizing the Setup Page"
+next_stage: /stages/10-bring-your-own-app/
+next_title: "Bring Your Own App"
 ---
 
 ## Overview
