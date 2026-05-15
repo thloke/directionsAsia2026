@@ -4,7 +4,7 @@ title: "Publishing & Next Steps"
 stage_num: 5
 description: "Publish your agent and explore what comes next."
 prev_stage: /stages/04-testing/
-prev_title: "Testing & Debugging"
+prev_title: "Inspecting Task Logs"
 ---
 
 ## Objectives

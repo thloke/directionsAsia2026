@@ -24,10 +24,10 @@ stages:
     description: "Use profile customization to control what your agent can see and access."
     icon: "🎨"
   - num: 4
-    title: "Testing & Debugging"
+    title: "Inspecting Task Logs"
     url: "/stages/04-testing/"
-    description: "Test your agent and debug common issues."
-    icon: "🧪"
+    description: "Use task log entries to understand how your agent reasoned through a task."
+    icon: "🔍"
   - num: 5
     title: "Publishing & Next Steps"
     url: "/stages/05-publishing/"
