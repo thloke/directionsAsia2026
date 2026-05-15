@@ -16,6 +16,7 @@ description: "Building Agents in Business Central — Directions Asia 2026"
     <div style="text-align:center; flex-shrink:0;">
       <img src="{{ '/assets/images/workshop_qr.png' | relative_url }}" alt="QR code linking to workshop instructions" style="width:150px; height:150px; background:#fff; border-radius:8px; padding:6px;" />
       <div style="font-size:0.75rem; margin-top:0.4rem; opacity:0.8;">Scan for workshop instructions</div>
+      <div style="font-size:0.85rem; margin-top:0.5rem; font-family:monospace; word-break:break-all; opacity:0.9;">thloke.github.io/directionsAsia2026</div>
     </div>
   </div>
 </div>
