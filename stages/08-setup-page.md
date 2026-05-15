@@ -5,6 +5,8 @@ stage_num: 8
 description: "Add per-environment configuration to your agent using a custom setup page."
 prev_stage: /stages/07-al-agent/
 prev_title: "Agent in AL"
+next_stage: /stages/09-programmatic-tasks/
+next_title: "Programmatic Tasks"
 ---
 
 ## Overview

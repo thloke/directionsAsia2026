@@ -48,3 +48,8 @@ stages:
     url: "/stages/08-setup-page/"
     description: "Add per-environment configuration fields to your agent's setup page."
     icon: "⚙️"
+  - num: 9
+    title: "Programmatic Tasks"
+    url: "/stages/09-programmatic-tasks/"
+    description: "Trigger agent tasks from page actions and business events using AL code."
+    icon: "⚡"
