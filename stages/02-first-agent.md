@@ -107,14 +107,6 @@ and provide a clear, concise summary to the user.</code></pre>
 <div class="task-card">
   <div class="task-card-header">
     <div class="task-number">8</div>
-    <h3>Open Agent Tasks</h3>
-  </div>
-  <p>Use the search (<strong>Tell me</strong>) to open the <strong>Agent Tasks</strong> page, or navigate via the agent icon in the navigation bar and select your agent.</p>
-</div>
-
-<div class="task-card">
-  <div class="task-card-header">
-    <div class="task-number">9</div>
     <h3>Run a task</h3>
   </div>
   <p>Select the <strong>Run task</strong> action. In the dialog, enter a simple task for the agent — for example:</p>
@@ -124,7 +116,7 @@ and provide a clear, concise summary to the user.</code></pre>
 
 <div class="task-card">
   <div class="task-card-header">
-    <div class="task-number">10</div>
+    <div class="task-number">9</div>
     <h3>Watch it run</h3>
   </div>
   <p>The task entry pane on the right of the UI will update in real time as the agent works through the task. Watch it execute and confirm you see a result appear.</p>
