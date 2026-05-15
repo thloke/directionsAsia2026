@@ -23,18 +23,14 @@ No set path here — find a meaningful integration point and go.
     <h3>Add your app as a dependency</h3>
   </div>
   <p>In <code>app.json</code>, add your app as a dependency:</p>
-
-```json
-"dependencies": [
+<pre><code>"dependencies": [
   {
-    "id": "<your-app-id>",
-    "name": "<Your App Name>",
-    "publisher": "<Your Publisher>",
+    "id": "&lt;your-app-id&gt;",
+    "name": "&lt;Your App Name&gt;",
+    "publisher": "&lt;Your Publisher&gt;",
     "version": "1.0.0.0"
   }
-]
-```
-
+]</code></pre>
   <p>Then run <strong>AL: Download Symbols</strong> to pull in your app's symbols so you can reference its objects directly.</p>
 </div>
 
@@ -58,16 +54,13 @@ No set path here — find a meaningful integration point and go.
     <h3>Write the task message with useful context</h3>
   </div>
   <p>The richer the task message, the better the agent performs. Include record IDs, relevant field values, and a clear instruction:</p>
-
-```al
-AgentTaskMessageBuilder
+<pre><code>AgentTaskMessageBuilder
     .Initialize(
         'System',
         'A new ' + Rec.TableCaption() + ' has been created: ' + Rec."No." +
         '. Description: ' + Rec.Description +
         '. Please review and take appropriate action.')
-    .SetRequiresReview(false);
-```
+    .SetRequiresReview(false);</code></pre>
 </div>
 
 <div class="task-card">
