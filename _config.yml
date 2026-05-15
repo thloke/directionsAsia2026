@@ -29,7 +29,7 @@ stages:
     description: "Use task log entries to understand how your agent reasoned through a task."
     icon: "🔍"
   - num: 5
-    title: "Publishing & Next Steps"
+    title: "Make It Your Own"
     url: "/stages/05-publishing/"
-    description: "Publish your agent and explore what comes next."
-    icon: "📦"
+    description: "Adapt the agent for your own product and explore AppSource integration."
+    icon: "🛠️"

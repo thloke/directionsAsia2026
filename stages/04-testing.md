@@ -6,7 +6,7 @@ description: "Use task log entries to understand how your agent reasoned through
 prev_stage: /stages/03-profile-customization/
 prev_title: "Customizing the Agent's Profile"
 next_stage: /stages/05-publishing/
-next_title: "Publishing & Next Steps"
+next_title: "Make It Your Own"
 ---
 
 ## Overview
