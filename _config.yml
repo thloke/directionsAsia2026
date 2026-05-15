@@ -33,3 +33,8 @@ stages:
     url: "/stages/05-publishing/"
     description: "Adapt the agent for your own product and explore AppSource integration."
     icon: "🛠️"
+  - num: 6
+    title: "Export & Import"
+    url: "/stages/06-export-import/"
+    description: "Export your agent as an XML definition and import it into a new agent."
+    icon: "📤"

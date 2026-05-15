@@ -5,6 +5,8 @@ stage_num: 5
 description: "Adapt the agent for your own product and explore what it can do."
 prev_stage: /stages/04-testing/
 prev_title: "Inspecting Task Logs"
+next_stage: /stages/06-export-import/
+next_title: "Export & Import"
 ---
 
 ## Overview
