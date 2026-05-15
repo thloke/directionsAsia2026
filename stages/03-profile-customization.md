@@ -63,13 +63,25 @@ An agent can only interact with pages and actions that its profile exposes. In t
   The customization window closes and you're back on the agent page.
 </div>
 
+<div class="task-card">
+  <div class="task-card-header">
+    <div class="task-number">5</div>
+    <h3>Deactivate and reactivate the agent</h3>
+  </div>
+  <p>Profile changes don't take effect until the agent is restarted. On the agent page, turn the <strong>Active</strong> toggle <strong>off</strong>, then turn it back <strong>on</strong> again.</p>
+  <div class="callout callout-info" style="margin-top:0.75rem; margin-bottom:0;">
+    <div class="callout-title">&#8505; Why this is needed</div>
+    The agent caches its profile on activation. Toggling it off and on forces it to pick up the updated customization.
+  </div>
+</div>
+
 ---
 
 ## Part 2 — Test the Restriction
 
 <div class="task-card">
   <div class="task-card-header">
-    <div class="task-number">5</div>
+    <div class="task-number">6</div>
     <h3>Re-run the original task</h3>
   </div>
   <p>Run a new task with the same prompt as Stage 2:</p>
@@ -78,7 +90,7 @@ An agent can only interact with pages and actions that its profile exposes. In t
 
 <div class="task-card">
   <div class="task-card-header">
-    <div class="task-number">6</div>
+    <div class="task-number">7</div>
     <h3>Observe the result</h3>
   </div>
   <p>Watch the task pane on the right. This time the agent should be unable to navigate to the Customer List and will report that it cannot complete the task.</p>

@@ -36,10 +36,31 @@ Every task your agent runs produces a detailed log of its reasoning and actions.
     <div class="task-number">3</div>
     <h3>View the log entries</h3>
   </div>
-  <p>With the task selected, choose the <strong>View log entries</strong> action from the action bar. This opens the full log of every step the agent took — including which pages it navigated to, what data it read, and how it arrived at its response.</p>
+  <p>With the task selected, choose the <strong>View log entries</strong> action from the action bar. This opens the list of every step the agent took.</p>
+</div>
+
+---
+
+## Part 2 — Investigate a Log Entry
+
+<div class="task-card">
+  <div class="task-card-header">
+    <div class="task-number">4</div>
+    <h3>Select a log entry</h3>
+  </div>
+  <p>In the log entries list, select an individual entry that looks interesting — for example, one where the agent navigated to a page or read some data.</p>
+</div>
+
+<div class="task-card">
+  <div class="task-card-header">
+    <div class="task-number">5</div>
+    <h3>View the details</h3>
+  </div>
+  <p>Choose the <strong>View details</strong> action from the action bar. This shows the full detail of that specific step — what the agent was looking at, what it found, and what it decided to do next.</p>
+  <p>Try this on a few different entries to get a feel for how the agent reasons through a task.</p>
 </div>
 
 <div class="callout callout-tip">
   <div class="callout-title">&#10003; Stage complete when…</div>
-  You can see the individual log entries for a completed task and trace the agent's reasoning from start to finish.
+  You can see the individual log entries for a completed task and have drilled into at least one entry using <strong>View details</strong>.
 </div>
