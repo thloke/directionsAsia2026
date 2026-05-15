@@ -24,6 +24,7 @@ Your facilitator will provide you with a printed handout containing your login c
 
 ## Stuck?
 
+- Make sure the URL includes your environment name — it should be **`businesscentral.dynamics.com/<environmentname>`**, not just the base URL
 - Make sure you are using the credentials exactly as provided — check for capital letters and spaces
 - Try an **InPrivate / Incognito** window if your browser auto-fills a different account
 - Ask your facilitator for help
