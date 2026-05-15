@@ -117,9 +117,9 @@ and provide a clear, concise summary to the user.</code></pre>
 <div class="task-card">
   <div class="task-card-header">
     <div class="task-number">9</div>
-    <h3>Review the result</h3>
+    <h3>Watch it run</h3>
   </div>
-  <p>Once the task completes, open the task entry to see the agent's output and the steps it took to get there. This task log is your main tool for understanding and improving your agent's behaviour.</p>
+  <p>The task entry pane on the right of the UI will update in real time as the agent works through the task. Watch it execute and confirm you see a result appear.</p>
 </div>
 
 <div class="callout callout-tip">
