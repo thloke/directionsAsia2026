@@ -163,12 +163,9 @@ end;</code></pre>
   <p>Go to the <strong>Agents (preview)</strong> page — your agent type should be listed. Select it and run through the setup dialog. It'll apply the profile and permissions from your AL code automatically.</p>
 </div>
 
-<div class="task-card">
-  <div class="task-card-header">
-    <div class="task-number">12</div>
-    <h3>Run the same task and compare</h3>
-  </div>
-  <p>Give it the same task from Stage 2 and check the log entries. The behaviour should be identical — it's the same agent, just defined in code now.</p>
+<div class="callout callout-info">
+  <div class="callout-title">&#8505; AL agents and the task designer</div>
+  Unlike UI-built agents, AL agents can't be triggered from the task designer in the UI. Programmatic task creation is covered in Stage 9 — that's how you'll run tasks against this agent.
 </div>
 
 <div class="callout callout-tip">
@@ -178,5 +175,5 @@ end;</code></pre>
 
 <div class="callout callout-tip">
   <div class="callout-title">&#10003; Stage complete when…</div>
-  Your AL extension is published, an agent instance is created from it, and you've successfully run a task that matches the behaviour of the UI-built agent from Stage 2.
+  Your AL extension is published and an agent instance is created from it on the Agents (preview) page.
 </div>
