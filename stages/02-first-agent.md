@@ -5,7 +5,7 @@ stage_num: 2
 description: "Create a UI-driven custom agent and trigger its first task — no code required."
 prev_stage: /stages/01-introduction/
 prev_title: "Introduction & Setup"
-next_stage: /stages/03-tools-actions/
+next_stage: /stages/03-profile-customization/
 next_title: "Tools & Actions"
 ---
 

@@ -20,7 +20,7 @@ stages:
     icon: "🤖"
   - num: 3
     title: "Customizing the Agent's Profile"
-    url: "/stages/03-tools-actions/"
+    url: "/stages/03-profile-customization/"
     description: "Use profile customization to control what your agent can see and access."
     icon: "🎨"
   - num: 4

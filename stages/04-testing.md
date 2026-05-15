@@ -3,8 +3,8 @@ layout: stage
 title: "Testing & Debugging"
 stage_num: 4
 description: "Test your agent and debug common issues."
-prev_stage: /stages/03-tools-actions/
-prev_title: "Tools & Actions"
+prev_stage: /stages/03-profile-customization/
+prev_title: "Customizing the Agent's Profile"
 next_stage: /stages/05-publishing/
 next_title: "Publishing & Next Steps"
 ---
