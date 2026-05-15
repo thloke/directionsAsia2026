@@ -43,3 +43,8 @@ stages:
     url: "/stages/07-al-agent/"
     description: "Convert your exported agent to a deployable AL extension."
     icon: "💻"
+  - num: 8
+    title: "Customizing the Setup Page"
+    url: "/stages/08-setup-page/"
+    description: "Add per-environment configuration fields to your agent's setup page."
+    icon: "⚙️"

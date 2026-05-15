@@ -5,6 +5,8 @@ stage_num: 7
 description: "Convert your agent to AL code so it can be packaged and distributed as an extension."
 prev_stage: /stages/06-export-import/
 prev_title: "Export & Import"
+next_stage: /stages/08-setup-page/
+next_title: "Customizing the Setup Page"
 ---
 
 ## Overview
