@@ -66,8 +66,7 @@ A UI-built agent only lives in the environment where it was created. Moving it t
       "name": "My Workshop Environment",
       "environmentType": "Sandbox",
       "environmentName": "&lt;your-environment-name&gt;",
-      "tenant": "&lt;your-tenant-id&gt;",
-      "authentication": "UserPassword"
+      "tenant": "&lt;your-tenant-id&gt;"
     }
   ]
 }</code></pre>
@@ -122,7 +121,7 @@ Keep the XML from Stage 6 open alongside VS Code — you'll use it as a referenc
 <pre><code>procedure GetDefaultProfile(var TempAllProfile: Record "All Profile" temporary)
 begin
     TempAllProfile."Profile ID" := 'BUSINESS MANAGER';
-    TempAllProfile."App ID" := SystemApplicationAppId;
+    TempAllProfile."App ID" := '437dbf0e-84ff-417a-965d-ed2bb9650972';
     TempAllProfile.Insert();
 end;</code></pre>
 </div>
@@ -132,7 +131,7 @@ end;</code></pre>
     <div class="task-number">8</div>
     <h3>Set the default permissions</h3>
   </div>
-  <p>In <strong>AgentFactory</strong>, update <code>GetDefaultAccessControls</code> with the permission sets from the XML. The template has <code>D365 BASIC</code> as a placeholder — swap it out. We used SUPER for the workshop, but you'd normally go least-privilege in production.</p>
+  <p>Open the <strong>My Agent</strong> permission set included in the template and add the permission sets from the XML. We used <code>SUPER</code> for the workshop, but you'd normally go least-privilege in production.</p>
 </div>
 
 <div class="task-card">
